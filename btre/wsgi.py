@@ -1,5 +1,7 @@
 """
-WSGI config for btre project.
+WSGI - Web Server Gateway Interface
+
+WSGI config for btre project. 
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

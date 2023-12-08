@@ -2,6 +2,8 @@
   height: 50px;
   background: #10284e;
   color: #fff;
+  align-items: center;
+  justify-content: center;
 }
 
 #branding h1 {

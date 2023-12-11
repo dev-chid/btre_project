@@ -1,10 +1,16 @@
 from django.shortcuts import get_object_or_404, render
+from django.core.paginator import Paginator, Page
 from .models import Listing
 
 def index(request):
     listings = Listing.objects.all()
+    paginator = Paginator(listings, 1)
+
+    page_number = request.GET.get("page")
+    page_obj = paginator.get_page(page_number)
+
     context = {
-        'listings': listings
+        'listings': page_obj
     }
     return render(request, 'listings/listings.html', context)
 

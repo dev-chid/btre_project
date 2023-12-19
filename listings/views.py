@@ -23,4 +23,8 @@ def listing(request, listing_id):
     return render(request, 'listings/listing.html', context)
 
 def search(request):
-    return render(request, 'listings/search.html')
+    listings = Listing.objects.all()
+    context = {
+        'listings': listings
+    }
+    return render(request, 'listings/search.html', context)
